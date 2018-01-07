@@ -11,7 +11,7 @@ export class QuoteComponent implements OnInit {
         new Quote(1,'Napoleon Hill','Whatever the mind of man can conceive and believe, it can achieve.',new Date(2018,3,14)),
         new Quote(2,'Jim Rohn','It takes half your life before you discover life is a do-it-yourself project.'),
         new Quote(3, 'Jeff Bezoz','Think twice before you speak, because your words and influence will plant the seed of either success or failure in the mind of another.'),
-        new Quote(4, 'Robert Kiyosaki','Pupper likes expensive sancks'),
+        new Quote(4, 'Robert Kiyosaki','Ideas are the beginning points of all fortunes.'),
         new Quote(5, 'Earl Nitingale','Damn Math'),
         
 
