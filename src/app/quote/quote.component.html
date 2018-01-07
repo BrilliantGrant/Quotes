@@ -1,0 +1,35 @@
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">{{ title }}</a>
+        </div>
+    </div>
+</nav>
+
+
+<div class="md-col-8">
+  <h2>Quote of the day</h2>
+  <hr>
+  <div class="row">
+      <form>
+        <div class="col-md-6 col-sm-6 col-lg-6">
+          <input id='search' #searchTerm type="text" class="form-control" (keyup)="search(searchTerm.value)" placeholder="Search...">
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6">
+          <button class="btn btn-popular" [ngClass]="{ 'btn-popular-active':clicked }" type="button" (click)="reorder();changeStyle()">Name</button>
+        </div>
+      </form>
+  </div>
+
+	<hr>
+	<div class="container">
+  <div class="row" *ngFor='let quote of quotes;let i = index'>
+  <li >{{quote.name}}</li>
+   <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
+   <div class="row" *ngIf="quote.showDescription">
+   <app-quote-details  [quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quote-details>
+</div>
+</div>
+<app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+</div>
+<p *ngIf='quotes.length > 5'>You have too many quotes</p>
