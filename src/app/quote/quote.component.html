@@ -9,6 +9,7 @@
 
 <div class="md-col-8">
   <h2>Quote of the day</h2>
+
   <hr>
   <div class="row">
       <form>
@@ -30,6 +31,12 @@
    <app-quote-details  [quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quote-details>
 </div>
 </div>
+<hr>
+<strong>{{ quote.votes }}</strong>
+      <p>votes</p>
+      <button type='button' class='btn' (click)='voteUp()'>+1</button>
+      <button type='button' class='btn' (click)='voteDown()'>-1</button>
+      <p class="user-signature">Posted by {{ quote.username }}</p>
 <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 </div>
 <p *ngIf='quotes.length > 5'>You have too many quotes</p>
