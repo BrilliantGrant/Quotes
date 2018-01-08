@@ -15,8 +15,8 @@ export class QuoteDetailsComponent implements OnInit {
     this.isComplete.emit(complete);
   }
   private title:string = "Get inspired!";
-  private quote:any = {
-    "quote":"loading quote...",
+  private Quote:any = {
+    "Quote":"loading quote...",
     "author":"loading author..."
   };
   constructor() { }
