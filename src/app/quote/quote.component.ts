@@ -33,7 +33,7 @@ export class QuoteComponent implements OnInit {
         this.quotes.push(quote)
 
     }
-     private title:string = "Get inspired!";
+      title:string = "Get inspired!";
   private quote:any = {
     "quote":"loading quote...",
     "author":"loading author..."
